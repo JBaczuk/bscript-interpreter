@@ -1,7 +1,7 @@
-# Bitcoin Script JS
+# Bitcoin Script Interpreter
 Bitcoin script interpreter written in javascript for browsers and node.js.
 
-[![Build Status](https://travis-ci.com/JBaczuk/bitcoin-script-js.svg?branch=master)](https://travis-ci.com/JBaczuk/bitcoin-script-js)
+[![Build Status](https://travis-ci.com/JBaczuk/bscript-interpreter.svg?branch=master)](https://travis-ci.com/JBaczuk/bscript-interpreter)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 ## Interactive Runtime

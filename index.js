@@ -50,6 +50,7 @@ class Interpreter {
         if (typeof opcodes.opcodeForWord(word) === 'undefined') {
           throw Error(`Invalid opcode ${this.script.at(this.programCounter).toString(16)}`)
         } else {
+          console.log('opcode', opcodes.opcodeForWord(word))
           operations.get(word)(this)
         }
       }
@@ -90,7 +91,4 @@ class Interpreter {
   }
 }
 
-module.exports = {
-  Interpreter,
-  Script
-}
+module.exports = Interpreter

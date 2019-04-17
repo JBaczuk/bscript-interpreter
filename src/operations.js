@@ -381,7 +381,6 @@ module.exports = new Map([
   ['OP_NOP10', function (context) {
 
   }],
-
   ['OP_INVALID[OPCODE', function (context) {
     throw Error(`Invalid opcode ${context.script.at(this.programCounter).toString(16)}`)
   }]

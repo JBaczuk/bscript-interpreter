@@ -35,7 +35,7 @@ describe('Interpreter Tests', function () {
       })
     })
     // Invalid opcodes
-    for (let i = 0xba; i <= 0xff; i++) {
+    for (let i = 0xba; i <= 0xfc; i++) {
       it(`should throw Invalid opcode ${i.toString(16)}`, function () {
         // Test execution
         let buf = Buffer.alloc(1)

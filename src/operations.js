@@ -240,7 +240,6 @@ module.exports = new Map([
   }],
 
   ['OP_ADD', function (context) {
-    debugger
     function bufToInt (uintArray) {
       let buf = Buffer.from(uintArray)
       let number = buf.readUIntLE(0, buf.length)

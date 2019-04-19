@@ -1,0 +1,143 @@
+{
+  "success": [
+    {
+      "description": "One bytes with stacktop=0x01",
+      "hex": "0101",
+      "stacktop": "01"
+    },
+    {
+      "description": "Two bytes with stacktop=0x0149",
+      "hex": "020149",
+      "stacktop": "0149"
+    },
+    {
+      "description": "Three bytes with stacktop=0x434343",
+      "hex": "03434343",
+      "stacktop": "434343"
+    },
+    {
+      "description": "Add two 8-bit numbers",
+      "hex": "515293",
+      "stacktop": "03"
+    },
+    {
+      "description": "Add two 8-bit numbers not ops",
+      "hex": "51011193",
+      "stacktop": "12"
+    },
+    {
+      "description": "Add two 16-bit numbers",
+      "hex": "02ff0f02000193",
+      "stacktop": "ff10"
+    },
+    {
+      "description": "Add two 32-bit numbers",
+      "hex": "03ffff0f03ffff0f93",
+      "stacktop": "feff1f"
+    }
+  ],
+  "fail": [
+    {
+      "description": "Push false on the stack",
+      "hex": "00",
+      "stacktop": "00"
+    },
+    {
+      "description": "Pushdata with false on the stack",
+      "hex": "0100",
+      "stacktop": "00"
+    },
+    {
+      "description": "Two items with false on top of stack",
+      "hex": "011000",
+      "stacktop": "00"
+    }
+  ],
+  "invalid": [
+    {
+      "description": "",
+      "hex": "",
+      "error_msg": "No script provided"
+    },
+    {
+      "description": "",
+      "hex": "7e",
+      "error_msg": "Disabled opcode OP_CAT"
+    },
+    {
+      "description": "",
+      "hex": "7f",
+      "error_msg": "Disabled opcode OP_SUBSTR"
+    },
+    {
+      "description": "",
+      "hex": "80",
+      "error_msg": "Disabled opcode OP_LEFT"
+    },
+    {
+      "description": "",
+      "hex": "81",
+      "error_msg": "Disabled opcode OP_RIGHT"
+    },
+    {
+      "description": "",
+      "hex": "83",
+      "error_msg": "Disabled opcode OP_INVERT"
+    },
+    {
+      "description": "",
+      "hex": "84",
+      "error_msg": "Disabled opcode OP_AND"
+    },
+    {
+      "description": "",
+      "hex": "85",
+      "error_msg": "Disabled opcode OP_OR"
+    },
+    {
+      "description": "",
+      "hex": "86",
+      "error_msg": "Disabled opcode OP_XOR"
+    },
+    {
+      "description": "",
+      "hex": "8d",
+      "error_msg": "Disabled opcode OP_2MUL"
+    },
+    {
+      "description": "",
+      "hex": "8e",
+      "error_msg": "Disabled opcode OP_2DIV"
+    },
+    {
+      "description": "",
+      "hex": "95",
+      "error_msg": "Disabled opcode OP_MUL"
+    },
+    {
+      "description": "",
+      "hex": "96",
+      "error_msg": "Disabled opcode OP_DIV"
+    },
+    {
+      "description": "",
+      "hex": "97",
+      "error_msg": "Disabled opcode OP_MOD"
+    },
+    {
+      "description": "",
+      "hex": "98",
+      "error_msg": "Disabled opcode OP_LSHIFT"
+    },
+    {
+      "description": "",
+      "hex": "99",
+      "error_msg": "Disabled opcode OP_RSHIFT"
+    },
+    {
+      "description": "Push 1 byte, but missing byte",
+      "hex": "01",
+      "error_msg": "Push bytes failed: script too small"
+    }
+  ]
+}

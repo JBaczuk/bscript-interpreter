@@ -1,12 +1,12 @@
 const fixtures = require('./fixtures/interpreterTests.json')
-const Interpreter = require('../../index')
+const { Interpreter } = require('../../index')
 const expect = require('chai').expect
 const Script = require('../../src/script')
 
 describe('Interpreter Tests', function () {
   describe('Valid Fixtures Tests', function () {
     fixtures.success.forEach(function (scriptFixture) {
-      it(`should evaluate successfully, have top stack element of ${scriptFixture.stacktop}, and return true`, function () {
+      it(`${scriptFixture.description}, should have top stack element of ${scriptFixture.stacktop}, and return true`, function () {
         // Test execution
         let script = new Script(Buffer.from(scriptFixture.hex, 'hex'))
         let interpreter = new Interpreter(script)
@@ -16,7 +16,7 @@ describe('Interpreter Tests', function () {
       })
     })
     fixtures.fail.forEach(function (scriptFixture) {
-      it(`should evaluate successfully, have top stack element of ${scriptFixture.stacktop}, and return false`, function () {
+      it(`${scriptFixture.description}, should have top stack element of ${scriptFixture.stacktop}, and return false`, function () {
         let script = new Script(Buffer.from(scriptFixture.hex, 'hex'))
         let interpreter = new Interpreter(script)
         let evalResult = interpreter.evaluate()

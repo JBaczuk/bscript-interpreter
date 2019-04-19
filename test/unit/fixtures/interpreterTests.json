@@ -14,6 +14,26 @@
       "description": "Three bytes with stacktop=0x434343",
       "hex": "03434343",
       "stacktop": "434343"
+    },
+    {
+      "description": "Add two 8-bit numbers",
+      "hex": "515293",
+      "stacktop": "03"
+    },
+    {
+      "description": "Add two 8-bit numbers not ops",
+      "hex": "51011193",
+      "stacktop": "12"
+    },
+    {
+      "description": "Add two 16-bit numbers",
+      "hex": "02ff0f02000193",
+      "stacktop": "ff10"
+    },
+    {
+      "description": "Add two 32-bit numbers",
+      "hex": "03ffff0f03ffff0f93",
+      "stacktop": "feff1f"
     }
   ],
   "fail": [

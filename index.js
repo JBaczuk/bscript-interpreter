@@ -41,7 +41,6 @@ class Interpreter {
         this.programCounter += 1 + bytesToPush
       } else {
         let opcode = this.script.at(this.programCounter)
-        console.log('opcode', opcode)
         let word = Script.wordForOpcode(opcode)
         if (Script.wordIsDisabled(word)) {
           throw Error(`Disabled opcode ${word}`)
@@ -50,7 +49,6 @@ class Interpreter {
         if (typeof opcodes.opcodeForWord(word) === 'undefined') {
           throw Error(`Invalid opcode ${this.script.at(this.programCounter).toString(16)}`)
         } else {
-          console.log('opcode', opcodes.opcodeForWord(word))
           operations.get(word)(this)
         }
       }
@@ -91,4 +89,7 @@ class Interpreter {
   }
 }
 
-module.exports = Interpreter
+module.exports = {
+  Interpreter,
+  Script
+}
